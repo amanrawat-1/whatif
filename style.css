@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2; 
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%); 
+}
+
+/* Gradient overlay */
+.gradient-overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 45deg,
+        rgba(1, 10, 10, 0.742),
+        rgba(0, 0, 0, 0.374)  
+    );
+    z-index: -1; 
+}
+
+/* Content container */
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+}
+
+.brand {
+    position: absolute;  
+    top: 3%;
+    left: 2.5%; 
+    z-index: 1; 
+}
+
+.brand img {
+    width: 14%;
+    height: auto; 
+}
+
+.header {
+      width: 35%;
+      position: absolute;
+      bottom: 0%;
+      left: 3%;
+      z-index: 3;
+}
+
+.header h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    font-family: 'Jost', sans-serif; /* Ensure consistency */
+    font-weight: 400; /* Set desired weight */
+}
+
+.logo img{
+    position: absolute;
+    width: 25%;
+    height: auto;
+    bottom: 6%; 
+    right: 6%;
+}
+
+
+.loader {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255); 
+    z-index: 9999; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.loader img {
+    width: 180px; 
+    height: auto;
+}
+
+.social-buttons {
+    position: fixed;
+    right: 35px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+  }
+
+  .social-button {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(252, 243, 243, 0.2);
+    backdrop-filter: blur(15px); 
+    box-shadow: 0 4px 8px rgba(74, 73, 73, 0.498); 
+    transition: background 0.3s, transform 0.3s;
+    text-decoration: none;
+  }
+
+  .social-button:hover {
+    background: rgba(255, 255, 255, 0.4); /* Slightly more opaque on hover */
+    transform: scale(1.08); /* Scale up effect on hover */
+  }
+
+  .social-button img {
+    width: 24px;
+    height: 24px;
+  }
+
+@media (max-width: 480px) {
+    .brand {
+        top: 4%;
+        left: 20px;
+    }
+
+    .brand img {
+        width: 36%; 
+    }
+
+    .header {
+        width: 80%; 
+        bottom: 18%; 
+        left: 6%;
+        letter-spacing: 1.5px; 
+    }
+
+    .header h1 {
+        font-size: 28px; 
+    }
+
+  .social-buttons {
+    position: fixed;
+    right: 25px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+  }
+
+  .social-button {
+    width: 65px;
+    height: 65px;
+  }
+
+  .logo img{
+    position: absolute;
+    width: 35%;
+    height: auto;
+    bottom: 14%; 
+    right: 6%;
+}
+}
